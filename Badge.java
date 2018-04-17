@@ -34,6 +34,14 @@
 
                               public void setIne (int ine) {
                                this.ine= ine;
-
                               }
+	   
+	   public String getBlock(){
+		   return block;
+	   }
+	   
+	   public void setBlock(String Block){
+		   this.block=block;
+	   }
+	   
                        }

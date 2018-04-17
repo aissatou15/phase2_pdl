@@ -12,20 +12,20 @@ public class Fenetre extends JFrame {
 	  public Fenetre(){  
 	
 		
-		//Définit un titre pour la fenêtre
+		//DÃ©finit un titre pour la fenÃªtre
 		this.setTitle("connexion");
-		//définit la taille : 400 pixels de large et 100 pixels de haut
+		//dÃ©finit la taille : 400 pixels de large et 100 pixels de haut
 		this.setSize(300, 150) ;
-		//positionnement de l’objet au centre 
+		//positionnement de lâ€™objet au centre 
 		this.setLocationRelativeTo(null) ;
 		//termine le processus si on clique sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Instanciation d'un objet JPanel
 		    JPanel pan = new JPanel();
-		    //Définition de sa couleur de fond
+		    //DÃ©finition de sa couleur de fond
 		    pan.setBackground(Color.WHITE);
 		   
-		    //On prévient à notre  JFrame que notre JPanel sera son content panel
+		    //On prÃ©vient Ã  notre  JFrame que notre JPanel sera son content panel
 		    this.setContentPane(pan); 
 		    JPanel panel = new JPanel();
 			this.getContentPane().add(panel);
@@ -37,7 +37,7 @@ public class Fenetre extends JFrame {
 				pan.add(userLabel);
 
 				JTextField userText = new JTextField(20);
-				userText.setBounds(100, 10, 160, 25);
+				userText.setBounds(100, 10, 80, 25);
 				pan.add(userText);
 				
 				JLabel passwordLabel = new JLabel("Password");
@@ -45,7 +45,7 @@ public class Fenetre extends JFrame {
 				pan.add(passwordLabel);
 
 				JPasswordField passwordText = new JPasswordField(20);
-				passwordText.setBounds(100, 40, 160, 25);
+				passwordText.setBounds(100, 40, 80, 25);
 				pan.add(passwordText);
 				
 				
@@ -56,7 +56,7 @@ public class Fenetre extends JFrame {
 				ActionListener loginButtonListener = new LoginButtonListener();
 				loginButton.addActionListener(loginButtonListener);
 
-				// rendre la fenêtre visible
+				// rendre la fenÃªtre visible
 				this.setVisible(true);
 	  }
 	  }

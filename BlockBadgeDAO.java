@@ -29,8 +29,7 @@ public class BadgeDAO {
 		// chargement du pilote de bases de donnÃ©es
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-		} catch (ClassNotFoundException e) {
-			System.err
+		} catch (ClassNotFoundException e) {			System.err
 					.println("Impossible de charger le pilote de BDD, ne pas oublier d'importer le fichier .jar dans le projet");
 		}
 
@@ -44,7 +43,7 @@ public class BadgeDAO {
 	 *            le badge Ã  ajouter
 	 * @return retourne le nombre de lignes ajoutÃ©es dans la table
 	 */
-	public int ajouter(Badge badge) {
+	public int block(Badge badge) {
 		Connection con = null;
 		PreparedStatement ps = null;
 		int retour = 0;
@@ -58,7 +57,7 @@ public class BadgeDAO {
 			// Ã  communiquer dans l'insertion
 			// les getters permettent de rÃ©cupÃ©rer les valeurs des attributs
 			// souhaitÃ©s
-			ps = con.prepareStatement("INSERT INTO badge (BA_NUM) VALUES (?)");
+			ps = con.prepareStatement("INSERT INTO badge (BA_BLOCK) VALUES (?)");
 			ps.setInt(1, badge.getIne());
 			
 			// ExÃ©cution de la requÃªte

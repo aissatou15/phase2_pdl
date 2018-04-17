@@ -1,4 +1,5 @@
 
+
 /**
 *Classe Badge
 *@author samba-lu
@@ -11,19 +12,24 @@
                           */
 
 	   					  private int ine;
+	   private String block;
 
                           /**
                            * getter pour l'attribut numero badge
-                           * @return valeur du numéro du badge
+                           * @return valeur du numÃ©ro du badge
                            */
-
+	public Badge(String block, int ine){
+		this.block=block;
+		this.ine=ine;
+	}
+		
                             public int getIne() {
                              return ine;
                              }
 
                             /**
                              * setter pour l'attribut numero badge
-                             * @param emplacement :  nouvelle valeur du numéro du badge
+                             * @param emplacement :  nouvelle valeur du numÃ©ro du badge
                              */
 
                               public void setIne (int ine) {

@@ -12,20 +12,20 @@ import javax.swing.JPasswordField;
 public class Cards extends JFrame {
 	  public Cards(){  
 	
-		//Définit un titre pour la fenêtre
+		//DÃ©finit un titre pour la fenÃªtre
 		this.setTitle("Manage cards");
-		//définit la taille : 400 pixels de large et 100 pixels de haut
+		//dÃ©finit la taille : 400 pixels de large et 100 pixels de haut
 		this.setSize(300,150);
-		//positionnement de l’objet au centre 
+		//positionnement de lâ€™objet au centre 
 		this.setLocationRelativeTo(null) ;
 		//termine le processus si on clique sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Instanciation d'un objet JPanel
 		    JPanel pan = new JPanel();
-		    //Définition de sa couleur de fond
+		    //DÃ©finition de sa couleur de fond
 		    pan.setBackground(Color.WHITE);
 		   
-		    //On prévient à notre  JFrame que notre JPanel sera son content panel
+		    //On prÃ©vient Ã  notre  JFrame que notre JPanel sera son content panel
 		    this.setContentPane(pan); 
 		    JPanel panel = new JPanel();
 			this.getContentPane().add(panel);
@@ -46,10 +46,10 @@ public class Cards extends JFrame {
 			unblockButton.setBounds(10, 100, 80, 25);
 			pan.add(unblockButton);
 			
-			ActionListener loginButtonListener2 = new BlocButtonListener();
-			blockButton.addActionListener(loginButtonListener2);
+			ActionListener blockButtonListener = new RechercheButtonListener();
+			blockButton.addActionListener(blockButtonListener);
 			
-			// rendre la fenêtre visible
+			// rendre la fenÃªtre visible
 			this.setVisible(true);
 	  }
 }

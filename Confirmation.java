@@ -12,20 +12,20 @@ import javax.swing.JPasswordField;
 public class Confirmation extends JFrame {
 	  public Confirmation(){  
 	
-		//Définit un titre pour la fenêtre
+		//DÃ©finit un titre pour la fenÃªtre
 		this.setTitle("Confirmation");
-		//définit la taille : 400 pixels de large et 100 pixels de haut
+		//dÃ©finit la taille : 400 pixels de large et 100 pixels de haut
 		this.setSize(500, 300) ;
-		//positionnement de l’objet au centre 
+		//positionnement de lâ€™objet au centre 
 		this.setLocationRelativeTo(null) ;
 		//termine le processus si on clique sur la croix rouge
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//Instanciation d'un objet JPanel
 		    JPanel pan = new JPanel();
-		    //Définition de sa couleur de fond
+		    //DÃ©finition de sa couleur de fond
 		    pan.setBackground(Color.WHITE);
 		   
-		    //On prévient à notre  JFrame que notre JPanel sera son content panel
+		    //On prÃ©vient Ã  notre  JFrame que notre JPanel sera son content panel
 		    this.setContentPane(pan); 
 		    JPanel panel = new JPanel();
 			this.getContentPane().add(panel);
@@ -43,10 +43,13 @@ public class Confirmation extends JFrame {
 			noButton.setBounds(50, 100, 80, 25);
 			pan.add(noButton);
 			
-			ActionListener CardsButtonListener = new CardsButtonListener();
+			ActionListener CardsButtonListener = new YesButtonListener();
 			yesButton.addActionListener(CardsButtonListener);
 			
-			// rendre la fenêtre visible
+		  ActionListener CardsButtonListener2 = new CardsButtonListener();
+			noButton.addActionListener(CardsButtonListener2);
+		  
+			// rendre la fenÃªtre visible
 			this.setVisible(true);
 	  }
 }
